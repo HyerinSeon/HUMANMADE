@@ -481,18 +481,12 @@
   /* ------------- */
   /* 헤더 */
   .header {
-    /* background-color: #fff; */
-    /* border-bottom: 1px solid #5a5a5a; */
     height: 60px;
     justify-content: space-between;
     align-items: center;
     position: absolute;
     top: 0;
     left: 0;
-
-    /* pointer-events: none; */
-
-    /* 호버 막아야하는데 포인터이벤트는 클릭도 막히는 것 같다 */
   }
 
   .header:hover {
@@ -571,7 +565,6 @@
   }
   .sub_menu.on {
     display: none;
-    /* 원래 display: none; 이라서 변경이 안됌 */
   }
 
   .lan {
@@ -855,7 +848,6 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    /* 특정 브라우저(웹킷:크롬,사파리,엣지-) 에서만 지원이 되는 속성. 공공기관에서 사용 x */
     overflow: hidden;
   }
 
