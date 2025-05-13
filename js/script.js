@@ -1,27 +1,18 @@
 document.addEventListener(`DOMContentLoaded`, function () {
-  // 윈도우 너비값을 변수에 저장
   const windowWidth = window.innerWidth;
 
   // swiper
   let swiper = undefined;
   function initSwiper() {
-    // 윈도우 너비값을 변수에 저장
     const windowWidth = window.innerWidth;
     if (windowWidth >= 960 && swiper == undefined) {
       swiper = new Swiper(".mySwiper", {
-        // effect: "coverflow",
         loop: true,
         slidesPerView: 3,
         centeredSlides: true,
         initialSlide: 0,
         spaceBetween: 50,
-        // coverflowEffect: {
-        //   rotate: 0,
-        //   stretch: -100,
-        //   depth: 150,
-        //   modifier: 1,
-        //   slideShadows: false,
-        // },
+      },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -36,11 +27,9 @@ document.addEventListener(`DOMContentLoaded`, function () {
   initSwiper();
 
   // scroll 고정
-  // 전역 변수로 scroll 이벤트 핸들러를 저장
   let scrollHandler = null;
 
   function scrollFixed() {
-    // 윈도우 너비값을 변수에 저장
     const windowWidth = window.innerWidth;
     const section3 = document.querySelector(`.sec_3`);
     const section4 = document.querySelector(`.sec_4`);
@@ -71,7 +60,6 @@ document.addEventListener(`DOMContentLoaded`, function () {
     }
   }
 
-  //초기에 실행
   scrollFixed();
 
   // 윈도우가 리사이즈 될 때 자동 반응 하도록 설정
