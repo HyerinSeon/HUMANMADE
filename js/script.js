@@ -1,11 +1,9 @@
 document.addEventListener(`DOMContentLoaded`, function () {
-  // 윈도우 너비값을 변수에 저장
   const windowWidth = window.innerWidth;
 
   // swiper
   let swiper = undefined;
   function initSwiper() {
-    // 윈도우 너비값을 변수에 저장
     const windowWidth = window.innerWidth;
     if (windowWidth >= 960 && swiper == undefined) {
       swiper = new Swiper(".mySwiper", {
