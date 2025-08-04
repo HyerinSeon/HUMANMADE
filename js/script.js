@@ -1,29 +1,29 @@
 document.addEventListener(`DOMContentLoaded`, function () {
+  // 윈도우 너비값을 변수에 저장
   const windowWidth = window.innerWidth;
 
   // swiper
   let swiper = undefined;
   function initSwiper() {
+    // 윈도우 너비값을 변수에 저장
     const windowWidth = window.innerWidth;
-    function initSwiper() {
-  const windowWidth = window.innerWidth;
-  if (windowWidth >= 960 && swiper == undefined) {
-    swiper = new Swiper(".mySwiper", {
-      loop: true,
-      slidesPerView: 3,
-      centeredSlides: true,
-      initialSlide: 0,
-      spaceBetween: 50,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  } else if (windowWidth < 960 && swiper != undefined) {
-    swiper.destroy();
-    swiper = undefined;
+    if (windowWidth >= 960 && swiper == undefined) {
+      swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: 3,
+        centeredSlides: true,
+        initialSlide: 0,
+        spaceBetween: 50,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    } else if (windowWidth < 960 && swiper != undefined) {
+      swiper.destroy();
+      swiper = undefined;
+    }
   }
-}
 
   initSwiper();
 
@@ -62,8 +62,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
   }
 
   scrollFixed();
-
-  // 윈도우가 리사이즈 될 때 자동 반응 하도록 설정
+  
   window.addEventListener(`resize`, function () {
     initSwiper();
     scrollFixed();
