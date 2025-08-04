@@ -5,24 +5,25 @@ document.addEventListener(`DOMContentLoaded`, function () {
   let swiper = undefined;
   function initSwiper() {
     const windowWidth = window.innerWidth;
-    if (windowWidth >= 960 && swiper == undefined) {
-      swiper = new Swiper(".mySwiper", {
-        loop: true,
-        slidesPerView: 3,
-        centeredSlides: true,
-        initialSlide: 0,
-        spaceBetween: 50,
+    function initSwiper() {
+  const windowWidth = window.innerWidth;
+  if (windowWidth >= 960 && swiper == undefined) {
+    swiper = new Swiper(".mySwiper", {
+      loop: true,
+      slidesPerView: 3,
+      centeredSlides: true,
+      initialSlide: 0,
+      spaceBetween: 50,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    } else if (windowWidth < 960 && swiper != undefined) {
-      swiper.destroy();
-      swiper = undefined;
-    }
+    });
+  } else if (windowWidth < 960 && swiper != undefined) {
+    swiper.destroy();
+    swiper = undefined;
   }
+}
 
   initSwiper();
 
